@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2 Peter 1.3-15</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <section class="container">
+        <div class="content">
+            <h1>Scroll to Begin</h1>
+            <p>Start it like this..</p>
+        </div>
+    </section>
+    <section class="container">
+        <div class="content">
+            <h1>2 Peter 1.3</h1>
+            <p>3 His divine power has given us everything we need for a godly life through our knowledge of him who called us by his own glory and goodness.</p>
+        </div>
+    </section>
+    <section class="container">
+        <div class="content">
+            <h1>2 Peter 1.4</h1>
+            <p>4 Through these he has given us his very great and precious promises, so that through them you may participate in the divine nature, having escaped the corruption in the world caused by evil desires.</p>
+        </div>
+    </section>
+    <section class="container">
+        <div class="content">
+            <h1>2 Peter 1.5</h1>
+            <p>5 For this very reason, make every effort to add to your faith goodness; and to goodness, knowledge;</p>
+        </div>
+    </section>
+    <section class="container">
+        <div class="content">
+            <h1>2 Peter 1.6</h1>
+            <p>6 and to knowledge, self-control; and to self-control, perseverance; and to perseverance, godliness;</p>
+        </div>
+    </section>
+    <section class="container">
+        <div class="content">
+            <h1>2 Peter 1.7</h1>
+            <p>7 and to godliness, mutual affection; and to mutual affection, love.</p>
+        </div>
+    </section>
+    <div id="set-height"></div>
+    <video id="v0" tabindex="0", autobuffer preload>
+        <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' src="dandelion.mp4">
+        </source>
+    </video>
+    <script src="sticky.js"></script>
+    <script>
+
+        enterView({
+            selector: 'section',
+            enter: function(el) {
+                el.classList.add('entered');
+            }
+        })
+    
+        var frameNumber = 0, // start video at frame 0
+        // lower numbers = faster playback
+        playbackConst = 400, 
+        // get page height from video duration
+        setHeight = document.getElementById("set-height"), 
+        // select video element         
+        vid = document.getElementById('v0'); 
+        // var vid = $('#v0')[0]; // jquery option
+
+    // dynamically set the page height according to video length
+    vid.addEventListener('loadedmetadata', function() {
+    setHeight.style.height = Math.floor(vid.duration) * playbackConst + "px";
+    });
+
+
+    // Use requestAnimationFrame for smooth playback
+    function scrollPlay(){  
+    var frameNumber  = window.pageYOffset/playbackConst;
+    vid.currentTime  = frameNumber;
+    window.requestAnimationFrame(scrollPlay);
+    }
+
+    window.requestAnimationFrame(scrollPlay);
+    
+    </script>
+</body>
+</html>
