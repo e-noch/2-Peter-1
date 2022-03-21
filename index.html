@@ -6,13 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>2 Peter 1.3-15</title>
     <link rel="stylesheet" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
+    <div class="banner">
     <section class="container">
         <div class="content">
             <p style="color:#fff;">Scroll to Begin</p>
             <h1>2 Peter 1:5–7</h1>
-            
         </div>
     </section>
     <section class="container">
@@ -30,23 +31,14 @@
     <section class="container">
         <div class="content">
             <h1>add to your faith 
-                <a class="popup" data-resourcename="esv" href="#footnote13">
-                <span style="font-size:.35em;vertical-align:super;line-height:0">i</span></a>
-                <a href="#" style="color:rgba(255, 232, 106, 0.87);">virtue</a>,
+                <nav style="
+    display: inline-block;" role='navigation'>
+                <ul>
+                    <li><a data-page="about" href="#"><span  style="font-size:.35em;vertical-align:super;line-height:0;">i</span><span  style="color:rgba(255, 232, 106, 0.87);">virtue</span>,</a> </li>
+                </ul>
+                </nav>
             </h1>
-            <p></p>
-            
-            <div class="tooltip" style="">
-                <div class="tooltip-content">
-                    <div class="resourcetext">
-                        <p class="lang-en">
-                        <a data-reference="Php4.8" data-datatype="bible+esv" href="/reference/Php4.8?resourceName=esv" class="bibleref"><span style="vertical-align:normal">Php 4:8 </span>
-                        </a> 
-                        </p> 
-                    </div>
-                </div>
-                <div class="tooltip-footer" style="display: none;"></div>
-            </div>
+            <div class="about">Php 4:8 Finally, brethren, whatsoever things are true, whatsoever things are honest, whatsoever things are just, whatsoever things are pure, whatsoever things are lovely, whatsoever things are of good report; if there be any virtue, and if there be any praise, think on these things.</div>
         </div>
     </section>
     <section class="container">
@@ -96,6 +88,8 @@
         <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' src="dandelion.mp4">
         </source>
     </video>
+    <div id="bg"></div>
+    </div>
     <script src="sticky.js"></script>
     <script>
 
@@ -131,5 +125,25 @@
     window.requestAnimationFrame(scrollPlay);
     
     </script>
+    <script>
+        var page;
+$(
+  $("nav li a").hover(function() {
+    page = "."+$(this).data("page");
+    $(page).addClass("active")
+  }, function() {
+    $(page).removeClass("active");
+  })
+)
+
+    </script>
+    <script>
+        let bg = document.querySelector('#bg');
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            bg.style.backgroundSize = 2000 - value*20 +"px";
+        })
+    </script>
+    
 </body>
 </html>
