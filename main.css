@@ -76,40 +76,41 @@ div.active {
   display: block;
     padding: 20px; 
 }
-
 section:nth-of-type(1) {
-    height: 1200px;
+    height: 900px;
 }
 section:nth-of-type(2) {
-    height: 1200px;
+    height: 500px;
 }
 section:nth-of-type(3) {
-    height: 1200px;
+    height: 500px;
 }
 section:nth-of-type(4) {
     height: 1000px;
 }
 section:nth-of-type(5) {
-    height: 1200px;
+    height: 500px;
 }
 section:nth-of-type(6) {
-    height: 1200px;
+    height: 500px;
 }
 section:nth-of-type(7) {
-    height: 1200px;
+    height: 500px;
 }
 section:nth-of-type(8) {
-    height: 1200px;
+    height: 500px;
 }
 section:nth-of-type(9) {
-    height: 1200px;
+    height: 500px;
 }
 section:nth-of-type(10) {
-    height: 1200px;
+    height: 500px;
 }
 section:nth-of-type(11) {
     height: 1200px;
 }
+
+
 .entered {
 	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
