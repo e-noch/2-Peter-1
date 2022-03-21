@@ -15,6 +15,7 @@ body {
     background-position: center;
     background-size: 2000px;
     mix-blend-mode: screen;
+    background-blend-mode: screen;
 }
 
 #v0 {
