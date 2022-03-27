@@ -135,7 +135,7 @@
     <div id="bg"></div>
     </div>
     <script src="sticky.js"></script>
-    <script>
+    <script type="text/javascript">
 
         enterView({
             selector: 'section',
@@ -169,14 +169,14 @@
     window.requestAnimationFrame(scrollPlay);
     
     </script>
-    <script>
+    <script type="text/javascript">
         document.getElementsByClassName('container').scrollIntoView({
             behavior: 'auto',
             block: 'center',
             inline: 'center'
         });
     </script>
-    <script>
+    <script type="text/javascript">
         var page;
 $(
   $("nav li a").hover(function() {
@@ -188,11 +188,12 @@ $(
 )
 
     </script>
-    <script>
+    <script type="text/javascript">
         let bg = document.querySelector('#bg');
         window.addEventListener('scroll', function(){
             let value = window.scrollY;
             bg.style.backgroundSize = 8000 - value*5 +"px";
+            bg.style.opacity = 1 - .8;
         })
     </script>
     

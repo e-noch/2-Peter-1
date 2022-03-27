@@ -15,7 +15,8 @@ body {
     background-position: center;
     background-size: 5000px;
     mix-blend-mode: screen;
-    opacity: .81;
+    transition: 8s;
+    opacity: 1;
 }
 
 #v0 {
@@ -165,4 +166,14 @@ section:nth-of-type(16) {
       opacity: 1;
     }
   }
-  
+@media only screen and (max-device-width: 490px) { 
+       h1 {
+           font-size: 1.5em;
+           background: rgba(255, 255, 255, 0.4);
+           display: inline-block;
+           padding: 10px 15px;
+           border-radius: 5px;
+           margin: 0;
+           width: 60%;
+       }
+}  
